@@ -1,0 +1,25 @@
+{
+  "name": "marijuana-map",
+  "version": "0.0.1",
+  "description": "Data Maverick's marijuana map Edit",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-norwood-young/marijuana-map.git"
+  },
+  "keywords": [
+    "Map",
+    "Marijuana",
+    "Data",
+    "Visualization"
+  ],
+  "author": "Jason Norwood-Young, Dave Mackie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/j-norwood-young/marijuana-map/issues"
+  },
+  "homepage": "https://github.com/j-norwood-young/marijuana-map#readme"
+}

@@ -1,25 +1,19 @@
 {
-  "name": "marijuana-map",
+  "name": "brunch-app",
+  "description": "Brunch.io application",
+  "private": true,
+  "author": "Brunch",
   "version": "0.0.1",
-  "description": "Data Maverick's marijuana map Edit",
-  "main": "index.html",
+  "repository": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "brunch watch --server",
+    "build": "brunch build --production"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/j-norwood-young/marijuana-map.git"
-  },
-  "keywords": [
-    "Map",
-    "Marijuana",
-    "Data",
-    "Visualization"
-  ],
-  "author": "Jason Norwood-Young, Dave Mackie",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/j-norwood-young/marijuana-map/issues"
-  },
-  "homepage": "https://github.com/j-norwood-young/marijuana-map#readme"
+  "dependencies": {},
+  "devDependencies": {
+    "auto-reload-brunch": "^2",
+    "brunch": "^2",
+    "clean-css-brunch": "^2",
+    "uglify-js-brunch": "^2"
+  }
 }

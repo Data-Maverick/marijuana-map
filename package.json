@@ -14,12 +14,14 @@
     "d3": "^4.10.0",
     "datamaps": "^0.5.8",
     "tabletop": "^1.5.2",
-    "topojson": "^3.0.0"
+    "topojson": "^3.0.0",
+    "jquery": "*"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2",
     "brunch": "^2",
     "clean-css-brunch": "^2",
+    "less-brunch": "^2.10.0",
     "standard": "^10.0.2",
     "uglify-js-brunch": "^2"
   }

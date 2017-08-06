@@ -7,6 +7,8 @@ var d3 = require('d3')
 var Topojson = require('topojson')
 var Datamaps = require('datamaps')
 var Tabletop = require('tabletop')
+var _ = require("lodash")
+var $ = require("jquery");
 
 var map = null
 
@@ -19,33 +21,39 @@ const countryDataUrl = 'https://docs.google.com/spreadsheets/d/1PW_2A7786oLaSszO
 const processCountryData = function (data, tabletop) {
   var sheet1 = data['Sheet1']
   console.log(data['Sheet1'])
+  var fills = {};
+  data.Keys.elements.forEach(key => {
+    fills[key.key] = key.colour;
+  });
+  var keys = data.Keys.elements;
   var countryData = {}
   sheet1.elements.forEach(function (o) {
     countryData[o.id] = o
   })
-  drawmap(countryData)
+  drawmap(countryData, fills)
+  drawKey(keys)
 }
 
-const drawmap = function (countryData) {
+const drawmap = function (countryData, fills) {
   map = new Datamaps({
-    element: document.getElementById('container'),
+    element: document.getElementById('map'),
     responsive: true,
-    fills: {
-      'decriminalised': '#e41a1c',
-      'illegal': '#377eb8',
-      '#N/A': '#4daf4a',
-      'medical': '#984ea3',
-      'tolerated': '#ff7f00',
-      defaultFill: '#EDDC4E'
-    },
+    fills,
     data: countryData,
     geographyConfig: {
       popupTemplate: function (geo, data) {
-        return `<div class="hoverinfo"><strong> ${data.name} <br/> Legality: ${data.fillKey} </strong></div>`
+        return `<div class="hoverinfo"><strong> ${data.name} <br/> Legality: ${data.keyname} </strong></div>`
       }
     }
   })
 }
+
+const drawKey = keys => {
+  let template = _.template($("#legendKeyTemplate").html());
+  keys.forEach(key => {
+    $("#legend").append(template({key}));
+  })
+};
 
 Tabletop.init({
   key: countryDataUrl,

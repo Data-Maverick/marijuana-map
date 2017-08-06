@@ -2,16 +2,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Brunch</title>
+  <title>Data Maverick Marijuana Map</title>
   <link rel="stylesheet" href="/app.css">
   <script src="/app.js"></script>
-
-
 </head>
 <body>
+  <h1>Mary Jane's new world order</h1>
+ <div id="map-container">
+   <div id="map"></div>
+ </div>
+  <div id="legend"></div>
 
-<div id="container" style="position: relative;"></div>
-
+  <script type="text/template" id="legendKeyTemplate">
+    <div class="key">
+      <div class="key-colour" style="background-color: <%= key.colour %>"></div>
+      <div class="key-name"><%= key.name %></div>
+    </div>
+  </script>
+  
 </body>
-
-  <script>require('initialize');</script>
+<script>require('initialize');</script>

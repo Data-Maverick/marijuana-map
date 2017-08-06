@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 var d3 = require('d3')
-// var Topojson = require('topojson')
+var Topojson = require('topojson')
 var Datamaps = require('datamaps')
 var Tabletop = require('tabletop')
 
@@ -41,8 +41,6 @@ const drawmap = function (countryData) {
     data: countryData,
     geographyConfig: {
       popupTemplate: function (geo, data) {
-        //  console.log({geo, data})
-        //  var value = data.fillKey// ? data.fillKey : 'Unknown'
         return `<div class="hoverinfo"><strong> ${data.name} <br/> Legality: ${data.fillKey} </strong></div>`
       }
     }

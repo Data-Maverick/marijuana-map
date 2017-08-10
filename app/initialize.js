@@ -62,49 +62,14 @@ const drawmap = function (countryData, fills) {
 				$("#info").html(infoTemplate(countryData[d.properties.iso_a3]));
 				$("#info-container").removeClass("hide");
 			});
-		g.select("#ATA").remove()
+		g.select("#ATA").remove();
 	});
 	var zoom = d3.zoom().scaleExtent([1, 5]).on("zoom", zoomed);
 	svg.call(zoom);
-		
-	// 	
 	function zoomed() {
 		g.style("stroke-width", 1 / d3.event.transform.k + "px");
-		// g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")"); // not in d3 v4
-		g.attr("transform", d3.event.transform); // updated for d3 v4
+		g.attr("transform", d3.event.transform);
 	}
-
-	// map = new Datamaps({
-	// element: document.getElementById('map'),
-	// responsive: true,
-	// fills,
-	// data: countryData,
-	// geographyConfig: {
-	//   	popupTemplate: function (geo, data) {
-	// 		return `<div class="hoverinfo"><h4>${data.name}</h4> <strong>Legality:</strong> ${data.keyname}<br> ${ (data.price) ? "<strong>Price:</strong> US$" + Number(data.price).toFixed(2) + "<br>" : '' } ${ (data.prevelance) ? "<strong>Prevalence:</strong> " + data.prevelance + "%<br>" : '' } </div>`;
-	// 	}
-	// },
-	// done: (datamap) => {
-	// 	function zoomed() {
-	// 		console.log("Zoom");
-	// 		// datamap.svg.select(".datamaps-subunits").attr("transform", d3.event.transform);
-	// 		// gX.call(xAxis.scale(d3.event.transform.rescaleX(x)));
-	// 		// gY.call(yAxis.scale(d3.event.transform.rescaleY(y)));
-	// 	}
-	// 	var zoom = d3.zoom()
-	// 	    .scaleExtent([1, 8])
-	// 	    .on("zoom", zoomed);
-		// datamap.svg.selectAll(".datamaps-subunit").on("click", (d) => {
-		// 	console.log(countryData[d.id]);
-		// 	$("#info").html(infoTemplate(countryData[d.id]));
-		// });
-	// 	datamap.svg.call(zoom);
-	// 	// datamap.svg.call(d3.zoom().on('zoom', redraw));
-	// 	// function redraw () {
-	// 	// 	datamap.svg.attr('transform', d3.event.transform);
-	// 	// }
-	// }
-	// });
 };
 
 const drawKey = keys => {

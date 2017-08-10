@@ -35,7 +35,7 @@ const drawmap = function (countryData, fills) {
 	data: countryData,
 	geographyConfig: {
 	  	popupTemplate: function (geo, data) {
-			return `<div class="hoverinfo"><strong> ${data.name} <br/> Legality: ${data.keyname} </strong></div>`;
+			return `<div class="hoverinfo"><h4>${data.name}</h4> <strong>Legality:</strong> ${data.keyname}<br> ${ (data.price) ? "<strong>Price:</strong> US$" + Number(data.price).toFixed(2) + "<br>" : '' } ${ (data.prevelance) ? "<strong>Prevalence:</strong> " + data.prevelance + "%<br>" : '' } </div>`;
 		}
 	},
 	done: (datamap) => {

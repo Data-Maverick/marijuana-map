@@ -7,16 +7,33 @@
   <script src="/app.js"></script>
 </head>
 <body>
-  <h1>Mary Jane's new world order</h1>
- <div id="map-container">
-   <div id="map"></div>
- </div>
-  <div id="legend"></div>
-
+ 	<h1>Mary Jane's new world order</h1>
+	<div id="map-container">
+		<div id="map"></div>
+	</div>
+  	<div id="legend"></div>
+	<div id="info"></div>
   <script type="text/template" id="legendKeyTemplate">
     <div class="key">
       <div class="key-colour" style="background-color: <%= key.colour %>"></div>
       <div class="key-name"><%= key.name %></div>
+    </div>
+  </script>
+
+  <script type="text/template" id="infoTemplate">
+    <div class="info">
+		<h3><%= name %></h3>
+		<h4><%= keyname %></h4>
+		<p class="sans"><%= continent %> | <%= region %></p>
+		<p>Weed is <%= legal_possess %> to possess, <%= legal_sale %> to sell, <%= legal_transport %> to transport and <%= legal_cultivate %> to grow in <%= name %>.</p>
+		<% if (prevelance) { %>
+		<p>An estimated <%= prevelance %> percent of the population use marijuana.</p>
+		<% } %>
+		<% if (price) { %>
+		<p>If you're paying your dealer more than US$<%= Number(price).toFixed(2) %> for a gram in <%= name %>, you're paying too much.</p> 
+		<p><%= (price == continent_price_median) ? `That's normal for ${ continent }` : (price < continent_price_median) ? `That's cheap compared to other countries in ${ continent }` : `You'd do better elsewhere in ${ continent }` %> where the median price is US$<%= Number(continent_price_median).toFixed(2) %></p>
+		<p>Among its <%= region %> neighbours, expect to pay US$<%= Number(region_price_median).toFixed(2) %>, <%= (price == region_price_median) ? `on par with ${ name }` : (price < region_price_median) ? `making ${ name } a good place to score.` : `making ${ name } overpriced for the area.` %></p>
+		<% } %>
     </div>
   </script>
   

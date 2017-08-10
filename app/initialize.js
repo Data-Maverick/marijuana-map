@@ -1,5 +1,5 @@
-var d3 = require('d3');
-var Topojson = require('topojson');
+import * as d3 from 'd3';
+var topojson = require('topojson');
 var Datamaps = require('datamaps');
 var Tabletop = require('tabletop');
 var _ = require('lodash');
@@ -20,6 +20,7 @@ const processCountryData = function (data, tabletop) {
 	});
 	var keys = data.Keys.elements;
 	sheet1.elements.forEach(function (o) {
+		o.color = fills[o.fillKey];
 		countryData[o.id] = o;
 	});
 	console.log(countryData);
@@ -35,27 +36,44 @@ const drawmap = function (countryData, fills) {
 	$("svg").attr("height", height + "px");
 	console.log(width, height);
   	var projection = d3.geoMercator()
-		.scale(width / 2 / Math.PI)
-		//.scale(100)
+		// .scale(width / 2 / Math.PI)
+		.scale(100)
 		.translate([width / 2, height / 2]);
 	var path = d3.geoPath()
 		.projection(projection);
-	var url = "http://enjalot.github.io/wwsd/data/world/world-110m.geojson";
+	var url = "ne_110m_admin.json";
 	var g = svg.append("g");
-	d3.json(url, function(err, geojson) {
-		g.append("path")
-			.attr("d", path(geojson));
+
+	d3.json(url, function(err, world) {
+		var countries = topojson.feature(world, world.objects.ne_110m_admin_0_countries).features;
+		g.selectAll(".country")
+			.data(countries)
+			.enter().insert("path", ".graticule")
+			.attr("class", "country")
+			.attr("d", path)
+			.attr("data-country", d => (d.properties.iso_a3))
+			.attr("id", d => (d.properties.iso_a3))
+			.style("fill", function(d, i) { 
+				if (countryData[d.properties.iso_a3]) {
+					return countryData[d.properties.iso_a3].color; 
+				}
+			})
+			.on("click", d=> {
+				$("#info").html(infoTemplate(countryData[d.properties.iso_a3]));
+				$("#info-container").removeClass("hide");
+			});
+		g.select("#ATA").remove()
 	});
-	var zoom = d3.zoom().scaleExtent([1, 8]).on("zoom", zoomed);
+	var zoom = d3.zoom().scaleExtent([1, 5]).on("zoom", zoomed);
 	svg.call(zoom);
 		
 	// 	
 	function zoomed() {
-		console.log("Zoom");
-		g.style("stroke-width", 1.5 / d3.event.transform.k + "px");
+		g.style("stroke-width", 1 / d3.event.transform.k + "px");
 		// g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")"); // not in d3 v4
 		g.attr("transform", d3.event.transform); // updated for d3 v4
 	}
+
 	// map = new Datamaps({
 	// element: document.getElementById('map'),
 	// responsive: true,
@@ -76,10 +94,10 @@ const drawmap = function (countryData, fills) {
 	// 	var zoom = d3.zoom()
 	// 	    .scaleExtent([1, 8])
 	// 	    .on("zoom", zoomed);
-	// 	datamap.svg.selectAll(".datamaps-subunit").on("click", (d) => {
-	// 		console.log(countryData[d.id]);
-	// 		$("#info").html(infoTemplate(countryData[d.id]));
-	// 	});
+		// datamap.svg.selectAll(".datamaps-subunit").on("click", (d) => {
+		// 	console.log(countryData[d.id]);
+		// 	$("#info").html(infoTemplate(countryData[d.id]));
+		// });
 	// 	datamap.svg.call(zoom);
 	// 	// datamap.svg.call(d3.zoom().on('zoom', redraw));
 	// 	// function redraw () {
@@ -104,4 +122,10 @@ Tabletop.init({
 document.addEventListener('DOMContentLoaded', function () {
 	// do your setup here
 	console.log('Initialized app');
+});
+
+$(function() {
+	$("#info-close").on("click", (e) => {
+		$("#info-container").addClass("hide");
+	});
 });

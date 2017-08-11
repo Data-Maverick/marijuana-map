@@ -36,8 +36,8 @@ const drawmap = function (countryData, fills) {
 	$("svg").attr("height", height + "px");
 	console.log(width, height);
   	var projection = d3.geoMercator()
-		// .scale(width / 2 / Math.PI)
-		.scale(100)
+		.scale(width / 2 / Math.PI)
+		// .scale(100)
 		.translate([width / 2, height / 2]);
 	var path = d3.geoPath()
 		.projection(projection);
@@ -92,5 +92,12 @@ document.addEventListener('DOMContentLoaded', function () {
 $(function() {
 	$("#info-close").on("click", (e) => {
 		$("#info-container").addClass("hide");
+	});
+
+	$("#sources").on("click", e => {
+		e.preventDefault();
+		let template = _.template($("#sourceTemplate").html());
+		$("#info").html(template());
+		$("#info-container").removeClass("hide");
 	});
 });

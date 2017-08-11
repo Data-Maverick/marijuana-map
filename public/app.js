@@ -48101,6 +48101,7 @@ var processCountryData = function processCountryData(data, keys) {
 	});
 	data.forEach(function (o) {
 		o.color = fills[o.fillKey];
+		if (o.keyname === "#N/A") o.keyname = "Unknown";
 		countryData[o.id] = o;
 	});
 	// console.log(countryData);

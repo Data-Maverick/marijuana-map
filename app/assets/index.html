@@ -39,11 +39,12 @@
     <p><%= continent %> | <%= region %></p>
     <hr>
 		<h4>Current status: <%= keyname %></h4>
+    <% if (keyname !== "Unknown") { %>
     <p><strong>Possession:</strong> <%= legal_possess %></p>
     <p><strong>Sale: </strong> <%= legal_sale %></p>
     <p><strong>Transport: </strong> <%= legal_transport %></p>
     <p><strong>Cultivation:</strong> <%= legal_cultivate %></p>
-
+    <% } %>
 		<% if (prevelance) { %>
 		<p><strong>Prevalence</strong> An estimated <%= prevelance %> percent of the population use marijuana.</p>
 		<% } %>

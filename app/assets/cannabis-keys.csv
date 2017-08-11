@@ -1,0 +1,9 @@
+key,colour,name,description
+very-illegal,#b2182b,Highly illegal,
+illegal,#ef8a62,Illegal,
+tolerated,#fddbc7,Tolerated,
+mixed,#f7f7f7,Region-dependent,
+decriminalised,#d1e5f0,Decriminalised,
+medical,#67a9cf,Legal for medicinal use,
+legal,#2166ac,Legal,
+#N/A,#eee,Unknown,

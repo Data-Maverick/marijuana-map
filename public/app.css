@@ -8,6 +8,9 @@
 .sans {
   font-family: helvetica, Arial;
 }
+a {
+  color: #2f57d2;
+}
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 10pt;

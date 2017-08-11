@@ -1,25 +1,20 @@
 import * as d3 from 'd3';
 var topojson = require('topojson');
-var Datamaps = require('datamaps');
-var Tabletop = require('tabletop');
 var _ = require('lodash');
 var $ = require('jquery');
 
 var map = null;
 var countryData = {};
 
-const countryDataUrl = 'https://docs.google.com/spreadsheets/d/1PW_2A7786oLaSszO1wsHv-J59yn7ov7dgp9OOehSSNI/pubhtml';
 const infoTemplate = _.template($("#infoTemplate").html());
 
-const processCountryData = function (data, tabletop) {
-	var sheet1 = data.Sheet1;
-	console.log(data.Sheet1);
+const processCountryData = function (data, keys) {
+	console.log(data);
 	var fills = {};
-	data.Keys.elements.forEach(key => {
+	keys.forEach(key => {
 		fills[key.key] = key.colour;
 	});
-	var keys = data.Keys.elements;
-	sheet1.elements.forEach(function (o) {
+	data.forEach(function (o) {
 		o.color = fills[o.fillKey];
 		countryData[o.id] = o;
 	});
@@ -79,14 +74,33 @@ const drawKey = keys => {
 	});
 };
 
-Tabletop.init({
-	key: countryDataUrl,
-	callback: processCountryData
-});
+var loadCSV = csv => {
+	return new Promise((resolve, reject) => {
+		d3.csv(csv, (err, data) => {
+			if (err)
+				return reject(err);
+			resolve(data);
+		});
+	});
+};
 
 document.addEventListener('DOMContentLoaded', function () {
 	// do your setup here
 	console.log('Initialized app');
+	var data = null;
+	var keys = null;
+	loadCSV("cannabis-data.csv")
+	.then(result => {
+		data = result;
+		return loadCSV("cannabis-keys.csv");
+	})
+	.then(result => {
+		keys = result;
+		processCountryData(data, keys);
+	})
+	.catch(err => {
+		console.error(err);
+	});
 });
 
 $(function() {

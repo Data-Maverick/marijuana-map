@@ -48094,7 +48094,7 @@ var countryData = {};
 var infoTemplate = _.template($("#infoTemplate").html());
 
 var processCountryData = function processCountryData(data, keys) {
-	console.log(data);
+	// console.log(data);
 	var fills = {};
 	keys.forEach(function (key) {
 		fills[key.key] = key.colour;
@@ -48103,7 +48103,7 @@ var processCountryData = function processCountryData(data, keys) {
 		o.color = fills[o.fillKey];
 		countryData[o.id] = o;
 	});
-	console.log(countryData);
+	// console.log(countryData);
 	drawmap(countryData, fills);
 	drawKey(keys);
 };
@@ -48111,7 +48111,7 @@ var processCountryData = function processCountryData(data, keys) {
 var tooltip = d3.select("body").append("div").attr("class", "tooltip").text("a simple tooltip");
 
 var tooltipText = function tooltipText(d) {
-	console.log(d);
+	// console.log(d);
 	return '<strong class="sans">' + d.name + '</strong><br>Status: ' + d.keyname;
 };
 
@@ -48121,7 +48121,7 @@ var drawmap = function drawmap(countryData, fills) {
 	var height = $("svg").parent().height();
 	$("svg").attr("width", "100%");
 	$("svg").attr("height", height + "px");
-	console.log(width, height);
+	// console.log(width, height);
 	var projection = d3.geoMercator().scale(width / 2 / Math.PI)
 	// .scale(100)
 	.translate([width / 2, height / 2]);
@@ -48178,7 +48178,7 @@ var loadCSV = function loadCSV(csv) {
 
 document.addEventListener('DOMContentLoaded', function () {
 	// do your setup here
-	console.log('Initialized app');
+	// console.log('Initialized app');
 	var data = null;
 	var keys = null;
 	loadCSV("cannabis-data.csv").then(function (result) {

@@ -9,7 +9,7 @@ var countryData = {};
 const infoTemplate = _.template($("#infoTemplate").html());
 
 const processCountryData = function (data, keys) {
-	console.log(data);
+	// console.log(data);
 	var fills = {};
 	keys.forEach(key => {
 		fills[key.key] = key.colour;
@@ -18,7 +18,7 @@ const processCountryData = function (data, keys) {
 		o.color = fills[o.fillKey];
 		countryData[o.id] = o;
 	});
-	console.log(countryData);
+	// console.log(countryData);
 	drawmap(countryData, fills);
 	drawKey(keys);
 };
@@ -29,7 +29,7 @@ var tooltip = d3.select("body")
 	.text("a simple tooltip");
 
 var tooltipText = d => {
-	console.log(d);
+	// console.log(d);
 	return `<strong class="sans">${d.name}</strong><br>Status: ${d.keyname}`;
 };
 
@@ -39,7 +39,7 @@ const drawmap = function (countryData, fills) {
 	var height = $("svg").parent().height();
 	$("svg").attr("width", "100%");
 	$("svg").attr("height", height + "px");
-	console.log(width, height);
+	// console.log(width, height);
   	var projection = d3.geoMercator()
 		.scale(width / 2 / Math.PI)
 		// .scale(100)
@@ -103,7 +103,7 @@ var loadCSV = csv => {
 
 document.addEventListener('DOMContentLoaded', function () {
 	// do your setup here
-	console.log('Initialized app');
+	// console.log('Initialized app');
 	var data = null;
 	var keys = null;
 	loadCSV("cannabis-data.csv")

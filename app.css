@@ -1,0 +1,117 @@
+.brunch {
+  font-family: -apple-system, Sans-Serif;
+  text-align: center;
+  font-size: 24pt;
+  color: #3f894a;
+}
+
+.sans {
+  font-family: helvetica, Arial;
+}
+a {
+  color: #2f57d2;
+}
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 10pt;
+  color: #444;
+  margin: 0px;
+  padding: 0px;
+}
+h1 {
+  font-size: 24pt;
+}
+h3 {
+  font-size: 18pt;
+  font-family: helvetica, Arial;
+}
+header {
+  z-index: 100;
+  position: absolute;
+  top: 20px;
+  display: block;
+}
+header img {
+  height: 40px;
+  background-color: white;
+  padding-right: 10px;
+}
+header h1 {
+  margin: 10px 0px 10px 40px;
+  line-height: 1.1;
+  font-family: helvetica, Arial;
+}
+header p {
+  margin: 10px 0px 10px 40px;
+  padding-bottom: 10px;
+  max-width: 500px;
+}
+.white-transparent-bg {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#map-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+#legend {
+  font-family: helvetica, Arial;
+  z-index: 100;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 6px;
+  font-size: 8pt;
+  width: 120px;
+}
+#legend .key {
+  display: block;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+#legend .key-colour {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 10px;
+}
+#info-container {
+  z-index: 200;
+  display: block;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 40px;
+  left: 0px;
+  max-height: 230px;
+  max-width: 500px;
+  bottom: 0px;
+  overflow-y: auto;
+}
+#info-container h3 {
+  margin: 0px;
+}
+path {
+  fill: none;
+  stroke: #bbb5b5;
+}
+.hide {
+  display: none !important;
+}
+#info-close {
+  position: absolute;
+  top: 10px;
+  z-index: 600;
+  right: 10px;
+  padding: 1px 6px 3px 6px;
+  background-color: #444;
+  color: white;
+  font-family: arial;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+/*# sourceMappingURL=app.css.map*/

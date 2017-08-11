@@ -2,6 +2,8 @@
 
 This map shows the legality of marijuana around the world
 
+[View it online now](https://j-norwood-young.github.io/marijuana-map/public/)
+
 ## Sources
 	* [Wikipedia - Legality of Cannabis by Country](https://en.wikipedia.org/wiki/Legality_of_cannabis_by_country)
 	* [UNODC Statistics Portal](https://data.unodc.org/)

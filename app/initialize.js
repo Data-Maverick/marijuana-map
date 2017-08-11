@@ -23,6 +23,16 @@ const processCountryData = function (data, keys) {
 	drawKey(keys);
 };
 
+var tooltip = d3.select("body")
+	.append("div")
+	.attr("class", "tooltip")
+	.text("a simple tooltip");
+
+var tooltipText = d => {
+	console.log(d);
+	return `<strong class="sans">${d.name}</strong><br>Status: ${d.keyname}`;
+};
+
 const drawmap = function (countryData, fills) {
 	var svg = d3.select("#map-container").append("svg");
 	var width = $("svg").parent().width();
@@ -56,7 +66,14 @@ const drawmap = function (countryData, fills) {
 			.on("click", d=> {
 				$("#info").html(infoTemplate(countryData[d.properties.iso_a3]));
 				$("#info-container").removeClass("hide");
-			});
+			})
+			.on("mouseover", d => {
+				tooltip.html(tooltipText(countryData[d.properties.iso_a3]));
+				return tooltip.style("visibility", "visible");
+			})
+			.on("mousemove", function(){return tooltip.style("top", (event.pageY + 20)+"px").style("left",(event.pageX - 30)+"px");})
+			.on("mouseout", function(){return tooltip.style("visibility", "hidden");})
+			;
 		g.select("#ATA").remove();
 	});
 	var zoom = d3.zoom().scaleExtent([1, 5]).on("zoom", zoomed);

@@ -60,7 +60,7 @@ const drawmap = function (countryData, stateData, fills) {
 	$("svg").attr("width", "100%");
 	$("svg").attr("height", height + "px");
 	// console.log(width, height);
-  	var projection = d3.geoMercator()
+  	var projection = d3.geoEquirectangular()
 		.scale(width / 2 / Math.PI)
 		// .scale(100)
 		.translate([width / 2, height / 2]);

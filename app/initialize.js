@@ -121,7 +121,7 @@ const drawmap = function (countryData, stateData, fills) {
 				$("#info-container").removeClass("hide");
 			})
 			;
-		var india_states = topojson.feature(world, world.objects.india_states).features;
+		var india_states = topojson.feature(world, world.objects.states).features;
 		g.selectAll(".in-state")
 			.data(india_states)
 			.enter().insert("path", ".graticule")

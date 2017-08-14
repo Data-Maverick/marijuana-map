@@ -49,20 +49,20 @@ CPV,CV,Cape Verde,Africa,Western Africa,illegal,Illegal,Illegal,Illegal,Illegal,
 CYM,KY,Cayman Islands,Americas,Caribbean,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,1.964501,4.3655,,
 CAF,CF,Central African Republic,Africa,Middle Africa,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,0.09,0.09,2006,0.1979815,0.13717,,
 TCD,TD,Chad,Africa,Middle Africa,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,0.1979815,0.13717,,
-CHL,CL,Chile,Americas,South America,medical,Legal for medicinal use,Illegal (decriminalized),Illegal (medical use only),Illegal (medical use only),Legal,2.31,2.306425,2014,1.964501,1.5,11.83,11.83
-CHN,CN,China,Asia,Eastern Asia,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,27.95,27.95181,2014,7.008,27.95181,,
+CHL,CL,Chile,Americas,South America,medical,Legal for medicinal use,Illegal (decriminalized),Illegal (medical use only),Illegal (medical use only),Legal[43],2.31,2.306425,2014,1.964501,1.5,11.83,11.83
+CHN,CN,China,Asia,Eastern Asia,illegal,Illegal,Illegal,Illegal,Illegal,Illegal[52],27.95,27.95181,2014,7.008,27.95181,,
 CXR,CX,Christmas Island,,,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,#N/A,#N/A,,
 CCK,CC,Cocos (Keeling) Islands,,,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,#N/A,#N/A,#N/A,
 COL,CO,Colombia,Americas,South America,legal,Legal,"Legal for up to 22 grams for personal use. No limit for medical or 
 scientific purpose, and if licensed by the ""National Anti-narcotics Council""",Legal for medical and scientific use only,Legal for medical and scientific use only,"Legal up to twenty plants for personal consumption. No limit for medical or 
 scientific use, and if licensed by the ""National Anti-narcotics Council""",0.40,0.4,2005,1.964501,1.5,3.27,3.27
 COM,KM,Comoros,Africa,Eastern Africa,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,0.1979815,0.16,,
-COG,CG,Congo,Africa,Middle Africa,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,0.18,0.18434,2006,0.1979815,0.13717,,
-COD,CD,Congo (Democratic Republic of the),Africa,Middle Africa,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,0.1979815,0.13717,#N/A,
+COG,CG,Congo,Africa,Middle Africa,illegal,Illegal,#N/A,#N/A,#N/A,#N/A,0.18,0.18434,2006,0.1979815,0.13717,,
+COD,CD,Congo (Democratic Republic of the),Africa,Middle Africa,illegal,Illegal,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,0.1979815,0.13717,#N/A,
 COK,CK,Cook Islands,Oceania,Polynesia,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,19.90742,#NUM!,,
-CRI,CR,Costa Rica,Americas,Central America,decriminalised,Decriminalised,Illegal (decriminalized),Illegal,Illegal,Illegal (decriminalized),6.50,6.5,2014,1.964501,1.8,2.76,2.76
-CIV,CI,Côte d'Ivoire,Africa,Western Africa,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,0.32,0.315808,2009,0.1979815,0.262404,,
-HRV,HR,Croatia,Europe,Southern Europe,medical,Legal for medicinal use,Illegal (decriminalized) (medical use only),Illegal (medical use only),Illegal,Illegal,7.95,7.948283,2010,12.10671,9.554801,5,5
+CRI,CR,Costa Rica,Americas,Central America,decriminalised,Decriminalised,Illegal (decriminalized)[59] [60],Illegal,Illegal,Illegal (decriminalized),6.50,6.5,2014,1.964501,1.8,2.76,2.76
+CIV,CI,Côte d'Ivoire,Africa,Western Africa,illegal,Illegal,#N/A,#N/A,#N/A,#N/A,0.32,0.315808,2009,0.1979815,0.262404,,
+HRV,HR,Croatia,Europe,Southern Europe,medical,Legal for medicinal use,Illegal (decriminalized)[61] (medical use only)[62],Illegal (medical use only)[62],Illegal,Illegal,7.95,7.948283,2010,12.10671,9.554801,5,5
 CUB,CU,Cuba,Americas,Caribbean,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,11.42909399,11.42909399,2009,1.964501,4.3655,,
 CUW,CW,Curaçao,Americas,Caribbean,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,1.964501,4.3655,,
 CYP,CY,Cyprus,Asia,Western Asia,illegal,Illegal,Illegal,Illegal,Illegal,Illegal (decriminalized for some farms to grow Hemp),26.32,26.31894,2014,7.008,10.25,2.2,2.2
@@ -75,7 +75,7 @@ DOM,DO,Dominican Republic,Americas,Caribbean,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,0.28,
 ECU,EC,Ecuador,Americas,South America,decriminalised,Decriminalised,Illegal (decriminalized) up to ten grams,Illegal,Illegal,Illegal,1.50,1.5,2011,1.964501,1.5,0.67,0.67
 EGY,EG,Egypt,Africa,Northern Africa,tolerated,Tolerated,Illegal,Illegal,Illegal,Illegal,0.2572334286,0.2572334286,2013,0.1979815,0.2572334286,6.24,6.24
 SLV,SV,El Salvador,Americas,Central America,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,0.50,0.5,2013,1.964501,1.8,2.03,2.03
-GNQ,GQ,Equatorial Guinea,Africa,Middle Africa,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,0.1979815,0.13717,,
+GNQ,GQ,Equatorial Guinea,Africa,Middle Africa,tolerated,Tolerated,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,0.1979815,0.13717,,
 ERI,ER,Eritrea,Africa,Eastern Africa,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,3.33,3.333,2008,0.1979815,0.16,,
 EST,EE,Estonia,Europe,Northern Europe,decriminalised,Decriminalised,Illegal (decriminalized),Illegal,Illegal,Illegal,26.32,26.31894,2014,12.10671,19.6821025,6,6
 ETH,ET,Ethiopia,Africa,Eastern Africa,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,0.1979815,0.16,,
@@ -131,7 +131,7 @@ Odisha and the North East.",0.08,0.075945,2012,7.008,0.520966,,
 IDN,ID,Indonesia,Asia,South-Eastern Asia,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,0.38,0.38,2014,7.008,4.7205,0.5,0.5
 IRN,IR,Iran,Asia,Southern Asia,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,7.008,0.520966,#N/A,
 IRQ,IQ,Iraq,Asia,Western Asia,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,7.008,10.25,,
-IRL,IE,Ireland,Europe,Northern Europe,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,26.32,26.31894,2014,12.10671,19.6821025,6,6
+IRL,IE,Ireland,Europe,Northern Europe,illegal,Illegal,Illegal[105],Illegal[105],Illegal[105],Illegal[105],26.32,26.31894,2014,12.10671,19.6821025,6,6
 IMN,IM,Isle of Man,Europe,Northern Europe,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,12.10671,19.6821025,,
 ISR,IL,Israel,Asia,Western Asia,medical,Legal for medicinal use,Legal for medicinal use.,Illegal (legal for medicinal use only),Illegal (legal for medicinal use only),Illegal (legal for licensed medicinal providers),,,,7.008,10.25,8.88,8.88
 ITA,IT,Italy,Europe,Southern Europe,medical,Legal for medicinal use,"Illegal (decriminalized, legal for medical and religious usage)",Illegal,IlIegal,Illegal,10.51,10.51442,2014,12.10671,9.554801,9.2,9.2
@@ -216,7 +216,8 @@ PRI,PR,Puerto Rico,Americas,Caribbean,medical,Legal for medicinal use,Illegal (m
 QAT,QA,Qatar,Asia,Western Asia,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,7.008,10.25,,
 REU,RE,Réunion,Africa,Eastern Africa,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,0.1979815,0.16,,
 ROU,RO,Romania,Europe,Eastern Europe,medical,Legal for medicinal use,Illegal,Illegal,Illegal,Illegal,17.75,17.75212,2014,12.10671,11.08685275,2,2
-RUS,RU,Russia,Europe,Eastern Europe,decriminalised,Decriminalised,"Illegal (decriminalized), possession of quantities of up to six grams",Illegal,"Illegal (decriminalized), transport of quantities of up to six grams","Illegal (decriminalized), cultivation of up to twenty plants",#N/A,,#N/A,12.10671,11.08685275,#N/A,
+RUS,RU,Russia,Europe,Eastern Europe,decriminalised,Decriminalised,"Illegal (decriminalized), possession of quantities of up to six grams",Illegal,"Illegal (decriminalized), transport of quantities of up to six grams","Illegal (decriminalized), cultivation of up to twenty plants[*citation 
+needed*]",#N/A,,#N/A,12.10671,11.08685275,#N/A,
 RWA,RW,Rwanda,Africa,Eastern Africa,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,0.13,0.13,2004,0.1979815,0.16,,
 BLM,BL,Saint Barthélemy,Americas,Caribbean,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,1.964501,4.3655,#N/A,
 SHN,SH,"Saint Helena, Ascension and Tristan da Cunha",Africa,Western Africa,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,0.1979815,0.262404,#N/A,
@@ -230,7 +231,7 @@ SMR,SM,San Marino,Europe,Southern Europe,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/
 STP,ST,Sao Tome and Principe,Africa,Middle Africa,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,0.1979815,0.13717,,
 SAU,SA,Saudi Arabia,Asia,Western Asia,very-illegal,Highly illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,7.008,10.25,0.3,0.3
 SEN,SN,Senegal,Africa,Western Africa,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,,,,0.1979815,0.262404,,
-SRB,RS,Serbia,Europe,Southern Europe,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,14.00,14,2014,12.10671,9.554801,1.6,1.6
+SRB,RS,Serbia,Europe,Southern Europe,illegal,Illegal,Illegal [169],Illegal,Illegal,Illegal,14.00,14,2014,12.10671,9.554801,1.6,1.6
 SYC,SC,Seychelles,Africa,Eastern Africa,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,0.1979815,0.16,,
 SLE,SL,Sierra Leone,Africa,Western Africa,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,0.1979815,0.262404,5.42,5.42
 SGP,SG,Singapore,Asia,South-Eastern Asia,very-illegal,Highly illegal,Illegal,Illegal,Illegal,Illegal,17.62,17.62085,2014,7.008,4.7205,,
@@ -238,7 +239,7 @@ SXM,SX,Sint Maarten (Dutch part),Americas,Caribbean,#N/A,#N/A,#N/A,#N/A,#N/A,#N/
 SVK,SK,Slovakia,Europe,Eastern Europe,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,11.51,11.5145355,2014,12.10671,11.08685275,3.63,3.63
 SVN,SI,Slovenia,Europe,Southern Europe,decriminalised,Decriminalised,Illegal (decriminalized),Illegal,Illegal,"Cannabis cultivation is not illegal for cannabis growers, growing cannabis 
 with ≤ 0.2 % THC on a ≤ 0.1 ha surface, or ≥ 0.1 ha surface with a 
-governmental permit for cannabis cultivation.",6.58,6.579734,2014,12.10671,9.554801,4.4,4.4
+governmental permit for cannabis cultivation.[176]",6.58,6.579734,2014,12.10671,9.554801,4.4,4.4
 SLB,SB,Solomon Islands,Oceania,Melanesia,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,19.90742,#NUM!,,
 SOM,SO,Somalia,Africa,Eastern Africa,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,0.1979815,0.16,,
 ZAF,ZA,South Africa,Africa,Southern Africa,illegal,Illegal,Legal,Illegal,Illegal,Legal,0.14,0.142,2007,0.1979815,0.3125,3.65,3.65
@@ -247,10 +248,10 @@ SSD,SS,South Sudan,Africa,Eastern Africa,illegal,Illegal,Illegal,Illegal,Illegal
 ESP,ES,Spain,Europe,Southern Europe,legal,Legal,"Legal (Private areas only, illegal in public areas (decriminalized), 
 offenders receive an administrative fine.) Possession of more than 
 70/100gr. (depending on the autonomous community) is considered as 
-possession with the intention of trafficking.","Technically illegal, but Cannabis can be acquired in private 
-smoker/cannabis clubs. Selling itself it's punished by prison in all 
+possession with the intention of trafficking.[184]","Technically illegal, but Cannabis can be acquired in private 
+smoker/cannabis clubs.[185] Selling itself it's punished by prison in all 
 the ways, even for first offenders.",Illegal (decriminalized),"Legal (Only for own consumption. If the plants are located somewhere 
-visible from the street/public place, it's an administrative offense)",6.16,6.158631,2014,12.10671,9.554801,9.2,9.2
+visible from the street/public place, it's an administrative offense[186])",6.16,6.158631,2014,12.10671,9.554801,9.2,9.2
 LKA,LK,Sri Lanka,Asia,Southern Asia,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,0.19,0.191205,2013,7.008,0.520966,1.43,1.43
 SDN,SD,Sudan,Africa,Northern Africa,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,0.1979815,0.2572334286,,
 SUR,SR,Suriname,Americas,South America,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,1.964501,1.5,4.25,4.25
@@ -269,7 +270,7 @@ TKL,TK,Tokelau,Oceania,Polynesia,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,#N/A,19.907
 TON,TO,Tonga,Oceania,Polynesia,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,19.90742,#NUM!,,
 TTO,TT,Trinidad and Tobago,Americas,Caribbean,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,0.96,0.956328,2009,1.964501,4.3655,4.03,4.03
 TUN,TN,Tunisia,Africa,Northern Africa,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,0.1979815,0.2572334286,2.6,2.6
-TUR,TR,Turkey,Asia,Western Asia,medical,Legal for medicinal use,Illegal (medical use only),Illegal,Illegal,Legal for medicinal and scientific purposes.,6.58,6.579734,2014,7.008,10.25,0.3,0.3
+TUR,TR,Turkey,Asia,Western Asia,medical,Legal for medicinal use,Illegal (medical use only),Illegal,Illegal,Legal for medicinal and scientific purposes.[209],6.58,6.579734,2014,7.008,10.25,0.3,0.3
 TKM,TM,Turkmenistan,Asia,Central Asia,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,22.80,22.8,2014,7.008,5.75,,
 TCA,TC,Turks and Caicos Islands,Americas,Caribbean,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,10.00,10,2006,1.964501,4.3655,,
 TUV,TV,Tuvalu,Oceania,Polynesia,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,#N/A,,#N/A,19.90742,#NUM!,,
@@ -278,12 +279,13 @@ UKR,UA,Ukraine,Europe,Eastern Europe,decriminalised,Decriminalised,Illegal (decr
 ARE,AE,United Arab Emirates,Asia,Western Asia,very-illegal,Highly illegal,Illegal,Illegal,Illegal,Illegal,110.00,110,2008,7.008,10.25,5.35,5.35
 GBR,GB,United Kingdom,Europe,Northern Europe,illegal,Illegal,Illegal,Illegal,Illegal,Illegal,4.44,4.436557,2014,12.10671,19.6821025,#N/A,
 USA,US,United States,Americas,Northern America,mixed,Region-dependent,"Illegal at the federal level (but legal at the state level in Alaska, 
-California, Colorado, Maine, Massachusetts, Nevada, Oregon and Washington and in Washington, D.C.; decriminalized in eighteen states, medicinal 
+California, Colorado, Maine, Massachusetts, Nevada, Oregon and Washington
+[217] and in Washington, D.C.; decriminalized in eighteen states, medicinal 
 legal in 25 states and Guam. All Indian Reservations are allowed to 
 regulate cannabis laws; laws vary by reservation.)","Illegal at the federal level (but legal at the state level with a state 
 issued license in Alaska, California, Colorado, Maine, Massachusetts, Nevada, 
 Oregon and Washington. Legal medicinal sales in several additional states.
-All Indian Reservations are allowed to regulate cannabis laws; laws 
+[218] All Indian Reservations are allowed to regulate cannabis laws; laws 
 vary by reservation. )","Illegal at the federal level (but legal at the state level within the 
 states of Alaska, California, Colorado, Maine, Massachusetts, Nevada, Oregon 
 and Washington. Legal for medicinal patients in several additional states. 

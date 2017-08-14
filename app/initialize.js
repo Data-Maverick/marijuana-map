@@ -186,6 +186,8 @@ const drawmap = function (countryData, stateData, fills) {
 const drawKey = keys => {
 	let template = _.template($('#legendKeyTemplate').html());
 	keys.forEach(key => {
+		if (key.key === "mixed")
+			return;
 		$('#legend').append(template({key}));
 	});
 };

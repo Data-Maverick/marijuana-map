@@ -48248,6 +48248,7 @@ var drawmap = function drawmap(countryData, stateData, fills) {
 var drawKey = function drawKey(keys) {
 	var template = _.template($('#legendKeyTemplate').html());
 	keys.forEach(function (key) {
+		if (key.key === "mixed") return;
 		$('#legend').append(template({ key: key }));
 	});
 };

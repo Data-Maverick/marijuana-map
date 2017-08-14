@@ -48093,9 +48093,15 @@ var countryData = {};
 
 var infoTemplate = _.template($("#infoTemplate").html());
 
-var processCountryData = function processCountryData(data, keys) {
+var processCountryData = function processCountryData(data, keys, us_states, india_states, oz_states) {
 	// console.log(data);
 	var fills = {};
+	var countryData = {};
+	var stateData = {
+		us: {},
+		india: {},
+		oz: {}
+	};
 	keys.forEach(function (key) {
 		fills[key.key] = key.colour;
 	});
@@ -48104,8 +48110,19 @@ var processCountryData = function processCountryData(data, keys) {
 		if (o.keyname === "#N/A") o.keyname = "Unknown";
 		countryData[o.id] = o;
 	});
-	// console.log(countryData);
-	drawmap(countryData, fills);
+	us_states.forEach(function (state) {
+		state.color = fills[state.fillKey];
+		stateData.us["US-" + state.id] = state;
+	});
+	india_states.forEach(function (state) {
+		state.color = fills[state.fillKey];
+		stateData.india[state.id] = state;
+	});
+	oz_states.forEach(function (state) {
+		state.color = fills[state.fillKey];
+		stateData.oz[state.id] = state;
+	});
+	drawmap(countryData, stateData, fills);
 	drawKey(keys);
 };
 
@@ -48116,7 +48133,8 @@ var tooltipText = function tooltipText(d) {
 	return '<strong class="sans">' + d.name + '</strong><br>Status: ' + d.keyname;
 };
 
-var drawmap = function drawmap(countryData, fills) {
+var drawmap = function drawmap(countryData, stateData, fills) {
+	// console.log(stateData);
 	var svg = d3.select("#map-container").append("svg");
 	var width = $("svg").parent().width();
 	var height = $("svg").parent().height();
@@ -48127,7 +48145,7 @@ var drawmap = function drawmap(countryData, fills) {
 	// .scale(100)
 	.translate([width / 2, height / 2]);
 	var path = d3.geoPath().projection(projection);
-	var url = "ne_110m_admin.json";
+	var url = "output.json";
 	var g = svg.append("g");
 
 	d3.json(url, function (err, world) {
@@ -48144,6 +48162,7 @@ var drawmap = function drawmap(countryData, fills) {
 			$("#info").html(infoTemplate(countryData[d.properties.iso_a3]));
 			$("#info-container").removeClass("hide");
 		}).on("mouseover", function (d) {
+			if (countryData[d.properties.iso_a3].fillKey === "mixed") return true;
 			tooltip.html(tooltipText(countryData[d.properties.iso_a3]));
 			return tooltip.style("visibility", "visible");
 		}).on("mousemove", function () {
@@ -48152,6 +48171,71 @@ var drawmap = function drawmap(countryData, fills) {
 			return tooltip.style("visibility", "hidden");
 		});
 		g.select("#ATA").remove();
+		var us_states = topojson.feature(world, world.objects.ne_110m_admin_1_states_provinces).features;
+		g.selectAll(".state").data(us_states).enter().insert("path", ".graticule").attr("class", "state").attr("d", path).attr("data-state", function (d) {
+			return d.properties.iso_3166_2;
+		}).attr("id", function (d) {
+			return d.properties.iso_3166_2;
+		}).style("fill", function (d, i) {
+			if (stateData.us[d.properties.iso_3166_2]) {
+				return stateData.us[d.properties.iso_3166_2].color;
+			}
+		}).on("mouseover", function (d) {
+			tooltip.html(tooltipText(stateData.us[d.properties.iso_3166_2]));
+			return tooltip.style("visibility", "visible");
+		}).on("mousemove", function () {
+			return tooltip.style("top", event.pageY + 20 + "px").style("left", event.pageX - 30 + "px");
+		}).on("mouseout", function () {
+			return tooltip.style("visibility", "hidden");
+		}).on("click", function (d) {
+			$("#info").html(infoTemplate(countryData.USA));
+			$("#info-container").removeClass("hide");
+		});
+		var india_states = topojson.feature(world, world.objects.india_states).features;
+		g.selectAll(".in-state").data(india_states).enter().insert("path", ".graticule").attr("class", "state").attr("d", path).attr("data-state", function (d) {
+			return d.properties.ST_NAME;
+		}).attr("id", function (d) {
+			return d.properties.ST_NAME;
+		}).style("fill", function (d, i) {
+			if (stateData.india[d.id]) {
+				return stateData.india[d.id].color;
+			}
+		}).on("mouseover", function (d) {
+			tooltip.html(tooltipText(stateData.india[d.id]));
+			return tooltip.style("visibility", "visible");
+		}).on("mousemove", function () {
+			return tooltip.style("top", event.pageY + 20 + "px").style("left", event.pageX - 30 + "px");
+		}).on("mouseout", function () {
+			return tooltip.style("visibility", "hidden");
+		}).on("click", function (d) {
+			$("#info").html(infoTemplate(countryData.IND));
+			$("#info-container").removeClass("hide");
+		});
+		var oz_states = topojson.feature(world, world.objects["australia-states"]).features;
+		// console.log(oz_states);
+		// var a = console.log(oz_states.map(state => {
+		// 	return `${state.properties.code}\t${state.properties.name}`;
+		// }).join("\n"));
+		g.selectAll(".au-state").data(oz_states).enter().insert("path", ".graticule").attr("class", "state").attr("d", path).attr("data-state", function (d) {
+			return d.properties.code;
+		}).attr("id", function (d) {
+			return d.properties.code;
+		}).style("fill", function (d, i) {
+			// console.log(d);
+			if (stateData.oz[d.properties.code]) {
+				return stateData.oz[d.properties.code].color;
+			}
+		}).on("mouseover", function (d) {
+			tooltip.html(tooltipText(stateData.oz[d.properties.code]));
+			return tooltip.style("visibility", "visible");
+		}).on("mousemove", function () {
+			return tooltip.style("top", event.pageY + 20 + "px").style("left", event.pageX - 30 + "px");
+		}).on("mouseout", function () {
+			return tooltip.style("visibility", "hidden");
+		}).on("click", function (d) {
+			$("#info").html(infoTemplate(countryData.AUS));
+			$("#info-container").removeClass("hide");
+		});
 	});
 	var zoom = d3.zoom().scaleExtent([1, 5]).on("zoom", zoomed);
 	svg.call(zoom);
@@ -48182,12 +48266,24 @@ document.addEventListener('DOMContentLoaded', function () {
 	// console.log('Initialized app');
 	var data = null;
 	var keys = null;
+	var us_states = null;
+	var india_states = null;
+	var oz_states = null;
 	loadCSV("cannabis-data.csv").then(function (result) {
 		data = result;
+		return loadCSV("cannabis-us-states.csv");
+	}).then(function (result) {
+		us_states = result;
+		return loadCSV("cannabis-australia-states.csv");
+	}).then(function (result) {
+		oz_states = result;
+		return loadCSV("cannabis-india-states.csv");
+	}).then(function (result) {
+		india_states = result;
 		return loadCSV("cannabis-keys.csv");
 	}).then(function (result) {
 		keys = result;
-		processCountryData(data, keys);
+		processCountryData(data, keys, us_states, india_states, oz_states);
 	}).catch(function (err) {
 		console.error(err);
 	});

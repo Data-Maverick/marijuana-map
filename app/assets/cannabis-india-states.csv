@@ -1,0 +1,30 @@
+id,name,fillKey,keyname
+AP,Andhra Pradesh,illegal,Illegal
+AR,Arunachal Pradesh,tolerated,Tolerated
+AS,Assam,tolerated,Tolerated
+BR,Bihar,tolerated,Tolerated
+CT,Chhattisgarh,illegal,Illegal
+DL,Delhi,illegal,Illegal
+GA,Goa,illegal,Illegal
+GJ,Gujarat,tolerated,Tolerated
+HR,Haryana,illegal,Illegal
+HP,Himachal Pradesh,illegal,Illegal
+JK,Jammu And Kashmir,illegal,Illegal
+JH,Jharkhand,illegal,Illegal
+KA,Karnataka,illegal,Illegal
+KL,Kerala,illegal,Illegal
+MP,Madhya Pradesh,illegal,Illegal
+MH,Maharashtra,illegal,Illegal
+MN,Manipur,tolerated,Tolerated
+ML,Meghalaya,tolerated,Tolerated
+MZ,Mizoram,tolerated,Tolerated
+NL,Nagaland,tolerated,Tolerated
+OR,Orissa,tolerated,Tolerated
+PB,Punjab,illegal,Illegal
+RJ,Rajasthan,illegal,Illegal
+SK,Sikkim,illegal,Illegal
+TN,Tamil Nadu,illegal,Illegal
+TR,Tripura,tolerated,Tolerated
+UT,Uttarakhand,legal,Legal
+UP,Uttar Pradesh,illegal,Illegal
+WB,West Bengal,tolerated,Tolerated

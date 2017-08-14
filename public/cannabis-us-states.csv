@@ -1,0 +1,52 @@
+id,name,fillKey,keyname
+AL,Alabama,illegal,Illegal
+AK,Alaska,legal,Legal
+AZ,Arizona,medical,Legal for medicinal use
+AR,Arkansas,medical,Legal for medicinal use
+CA,California,legal,Legal
+CO,Colorado,legal,Legal
+CT,Connecticut,decriminalised,Decriminalised
+DE,Delaware,decriminalised,Decriminalised
+DC,District of Columbia,#N/A,#N/A
+FL,Florida,medical,Legal for medicinal use
+GA,Georgia,medical,Legal for medicinal use
+HI,Hawaii,medical,Legal for medicinal use
+ID,Idaho,illegal,Illegal
+IL,Illinois,decriminalised,Decriminalised
+IN,Indiana,illegal,Illegal
+IA,Iowa,medical,Legal for medicinal use
+KS,Kansas,illegal,Illegal
+KY,Kentucky,illegal,Illegal
+LA,Louisiana,medical,Legal for medicinal use
+ME,Maine,legal,Legal
+MT,Montana,medical,Legal for medicinal use
+NE,Nebraska,medical,Legal for medicinal use
+NV,Nevada,legal,Legal
+NH,New Hampshire,decriminalised,Decriminalised
+NJ,New Jersey,medical,Legal for medicinal use
+NM,New Mexico,medical,Legal for medicinal use
+NY,New York,decriminalised,Decriminalised
+NC,North Carolina,medical,Legal for medicinal use
+ND,North Dakota,medical,Legal for medicinal use
+OH,Ohio,decriminalised,Decriminalised
+OK,Oklahoma,illegal,Illegal
+OR,Oregon,legal,Legal
+MD,Maryland,decriminalised,Decriminalised
+MA,Massachusetts,legal,Legal
+MI,Michigan,medical,Legal for medicinal use
+MN,Minnesota,decriminalised,Decriminalised
+MS,Mississippi,medical,Legal for medicinal use
+MO,Missouri,illegal,Illegal
+PA,Pennsylvania,illegal,Illegal
+RI,Rhode Island,decriminalised,Decriminalised
+SC,South Carolina,illegal,Illegal
+SD,South Dakota,illegal,Illegal
+TN,Tennessee,illegal,Illegal
+TX,Texas,illegal,Illegal
+UT,Utah,illegal,Illegal
+VT,Vermont,decriminalised,Decriminalised
+VA,Virginia,illegal,Illegal
+WA,Washington,legal,Legal
+WV,West Virginia,medical,Legal for medicinal use
+WI,Wisconsin,illegal,Illegal
+WY,Wyoming,illegal,Illegal

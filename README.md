@@ -2,16 +2,18 @@
 
 This map shows the legality of marijuana around the world
 
-[View it online now](https://j-norwood-young.github.io/marijuana-map/public/)
+[View it online now](https://data-maverick.github.io/marijuana-map/public/)
 
 ## Sources
-	* [Wikipedia - Legality of Cannabis by Country](https://en.wikipedia.org/wiki/Legality_of_cannabis_by_country)
-	* [UNODC Statistics Portal](https://data.unodc.org/)
-	* [Natural Earth](http://www.naturalearthdata.com/)
-	* [ISO-3166 Countries with Regional Codes](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes)
+
+* [Wikipedia - Legality of Cannabis by Country](https://en.wikipedia.org/wiki/Legality_of_cannabis_by_country)
+* [UNODC Statistics Portal](https://data.unodc.org/)
+* [Natural Earth](http://www.naturalearthdata.com/)
+* [ISO-3166 Countries with Regional Codes](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes)
 
 ## Data
-      [Google Sheets](https://docs.google.com/spreadsheets/d/11oRq43YWtXMlfPj459huG-0evvTd5COHpqWhpeOWPbw/edit?usp=sharing)
+
+[Google Sheets](https://docs.google.com/spreadsheets/d/11oRq43YWtXMlfPj459huG-0evvTd5COHpqWhpeOWPbw/edit?usp=sharing)
       
 ## Tech
 
@@ -19,7 +21,7 @@ This project was built using [D3.js](https://d3js.org/), using [Brunch](http://b
 
 ## Errata
 
-Deciding on the legality of cannabis in every country in the world is a complicated task, and all of the maps we examined split the definitions differently, and did not always agree with one another. Despite our best efforts to research a country's legal status for cannabis, the information we examined could have been incorrect. If you disagree with one of our categorisations, please let us know [Github Issues](https://github.com/j-norwood-young/marijuana-map/issues). Any corrections we make post-publication will be noted here.
+Deciding on the legality of cannabis in every country in the world is a complicated task, and all of the maps we examined split the definitions differently, and did not always agree with one another. Despite our best efforts to research a country's legal status for cannabis, the information we examined could have been incorrect. If you disagree with one of our categorisations, please let us know [Github Issues](https://github.com/data-maverick/marijuana-map/issues). Any corrections we make post-publication will be noted here.
 
 # Brunch app
 

@@ -1,10 +1,11 @@
 {
-  "name": "brunch-app",
-  "description": "Brunch.io application",
+  "name": "marijuana-map",
+  "description": "This map shows the legality of marijuana around the world",
+  "license": "MIT",
   "private": true,
-  "author": "Brunch",
-  "version": "0.0.1",
-  "repository": "",
+  "author": "Jason Norwood-Young <jason@freespeechpub.co.za>",
+  "version": "0.1.0",
+  "repository": "Data-Maverick/marijuana-map.git",
   "scripts": {
     "start": "brunch watch --server",
     "build": "brunch build --production"
